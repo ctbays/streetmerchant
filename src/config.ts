@@ -185,16 +185,11 @@ const browser = {
     process.env.PAGE_SLEEP_MAX,
     10000
   ),
-  minBackoff: envOrNumberMin(
-    process.env.PAGE_BACKOFF_MIN,
-    process.env.PAGE_BACKOFF_MAX,
-    10000
-  ),
-  minSleep: envOrNumberMin(
-    process.env.PAGE_SLEEP_MIN,
-    process.env.PAGE_SLEEP_MAX,
-    5000
-  ),
+  minBackoff: 
+    10000,
+  minSleep: 
+    5000,
+  
   open: envOrBoolean(process.env.OPEN_BROWSER),
   userAgent: '',
 };

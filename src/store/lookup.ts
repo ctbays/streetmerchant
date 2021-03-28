@@ -401,6 +401,7 @@ async function checkIsCloudflare(store: Store, page: Page, link: Link) {
 
   if (await pageIncludesLabels(page, cloudflareLabel, baseOptions)) {
     logger.warn(Print.cloudflare(link, store, true));
+    processBackoffDelay(store,link,503)
     return true;
   }
 
